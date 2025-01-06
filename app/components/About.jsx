@@ -2,7 +2,7 @@ import { assets, infoList, toolsData } from '@/assets/assets'
 import React from 'react'
 import Image from 'next/image'
 
-const About = () => {
+const About = ({isDarkMode}) => {
   return (
     <div id='about' className='w-full px-[12%] py-10 scroll-mt-20'>
         <h4 className='text-center mb-2 text-lg font-Ovo'>
@@ -18,7 +18,7 @@ const About = () => {
             </div>
             <div className='flex-1'>
                 <p className='mb-10 max-w-2xl font-Ovo'>
-                    I was born and raised in Princeton, NJ and currently a student at UPenn.
+                    I was born and raised in Princeton, NJ and currently am a student at UPenn.
                     I have internship experience in tech and finance, with freelance full stack
                     development experience. I am currently seeking jobs in Software Engineering, and I am
                     excited to bring my diverse background and skillset to a new company!
@@ -27,14 +27,18 @@ const About = () => {
                     {infoList.map(({icon, iconDark, title, description}, idx) => (
                         <li key={idx} className='border-[0.5px] border-gray-400
                         rounded-xl p-6 cursor-pointer hover:bg-lightHover
-                        hover:-translate-y-1 duration-500 hover:shadow-black'>
-                            <Image src={icon} alt={title} className='w-7 mt-3'/>
-                            <h3 className='my-4 font-semibold text-gray-700'>{title}</h3>
-                            <p className='text-gray-600 text-sm'>{description}</p>
+                        hover:-translate-y-1 duration-500 hover:shadow-black
+                        dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50'>
+                            <Image src={isDarkMode ? iconDark : icon} alt={title} className='w-7 mt-3'/>
+                            <h3 className='my-4 font-semibold text-gray-700
+                            dark:text-white'>{title}</h3>
+                            <p className='text-gray-600 text-sm
+                            dark:text-white/80'>{description}</p>
                         </li>
                     ))}
                 </ul>
-                <h4 className='my-6 text-gray-700 font-Ovo'>Tools I use</h4>
+                <h4 className='my-6 text-gray-700 font-Ovo
+                dark:text-white/80'>Tools I use</h4>
                 <ul className='flex items-center gap-3 sm:gap-5'>
                     {toolsData.map((tool, idx) => (
                         <li key={idx} className='flex items-center justify-center
