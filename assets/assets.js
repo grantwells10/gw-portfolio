@@ -78,23 +78,28 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: 'ILMUNC App',
+        description: 'iOS Application',
         bgImage: '/work-1.png',
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: 'HGit',
+        description: 'Haskell Git Clone',
         bgImage: '/work-2.png',
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
+        title: 'NBA Predictor',
+        description: 'Machine Learning',
         bgImage: '/work-3.png',
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
+        title: 'MoralMap',
+        description: 'Web Application',
+        bgImage: '/work-4.png',
+    },
+    {
+        title: 'QuickConvert',
+        description: 'Chome Extension',
         bgImage: '/work-4.png',
     },
 ]
