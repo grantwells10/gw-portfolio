@@ -41,8 +41,8 @@ const navbar = () => {
         px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"}`}>
             <li><a className='font-Ovo' href="#top">Home</a></li>
             <li><a className='font-Ovo' href="#about">About Me</a></li>
-            <li><a className='font-Ovo' href="#services">Services</a></li>
-            <li><a className='font-Ovo' href="#work">My Work</a></li>
+            <li><a className='font-Ovo' href="#experience">Experience</a></li>
+            <li><a className='font-Ovo' href="#projects">Projects</a></li>
             <li><a className='font-Ovo' href="#contact">Contact Me</a></li>
         </ul>
 

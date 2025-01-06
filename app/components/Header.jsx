@@ -14,11 +14,12 @@ const Header = () => {
             <Image src={assets.hand_icon} alt='' className='rounded-full w-6'/>
         </h3>
         <h1 className='text-3xl sm:text-6xl lg:text-[66px] font-Ovo'>
-            computer science student at UPenn
+            aspiring software engineer
         </h1>
         <p className='max-w-2xl mx-auto font-Ovo'>
             I am currently a Junior at the University of Pennsylvania studying
-            Computer Science with a Minor in Mathetmaics looking for Software Engineering positions.
+            Computer Science with a Minor in Mathetmaics looking for Software 
+            Engineering/Development positions.
         </p>
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
             <a href='#contact' className='px-10 py-3 border border-white
