@@ -35,6 +35,10 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import lloyd_logo from './lloyd_logo.png';
+import marathon_logo from './marathon_logo.jpeg';
+import picso_logo from './picso_logo.png';
+import tag_logo from './tag_logo.jpg';
 
 export const assets = {
     user_image,
@@ -73,7 +77,11 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    lloyd_logo,
+    marathon_logo,
+    picso_logo,
+    tag_logo
 };
 
 export const workData = [
@@ -105,10 +113,10 @@ export const workData = [
 ]
 
 export const experienceData = [
-    { icon: assets.web_icon, title: 'TAG Infosphere', description: 'TAG Infosphere work blurb', link: '' },
-    { icon: assets.mobile_icon, title: 'Marathon Asset Management', description: 'MAM work blurb', link: '' },
-    { icon: assets.ui_icon, title: 'Lloyd Group', description: 'Lloyd Group work blurb ', link: '' },
-    { icon: assets.graphics_icon, title: 'PICSO Lab', description: 'PICSO Lab, University of Pittsburgh, work blurb', link: '' },
+    { icon: assets.tag_logo, title: 'TAG Infosphere', description: 'AI Intern, Summer 2024', link: 'https://tag-infosphere.com/' },
+    { icon: assets.marathon_logo, title: 'Marathon Asset Management', description: 'Data Analyst Intern, Summer 2023', link: 'https://www.marathonfund.com/' },
+    { icon: assets.lloyd_logo, title: 'Lloyd Group', description: 'Automation & Development Intern, Summer 2022', link: 'https://www.lloydgroup.com/' },
+    { icon: assets.picso_logo, title: 'PICSO Lab', description: 'Research Intern, Summer 2021', link: 'https://picsolab.github.io/' },
 ]
 
 export const infoList = [
