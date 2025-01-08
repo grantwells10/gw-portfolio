@@ -1,77 +1,111 @@
 import { assets, workData } from '@/assets/assets'
 import { motion } from "motion/react"
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 
 const Projects = ({isDarkMode}) => {
+  const [showTooltip, setShowTooltip] = useState({});
+
+  const toggleTooltip = (title) => {
+    setShowTooltip(prev => ({
+      ...prev,
+      [title]: !prev[title]
+    }));
+  };
+
   return (
-    <motion.div
-    initial={{opacity: 0}}
-    whileInView={{opacity: 1}}
-    transition={{duration: 1}}
-    id='projects' className='w-full px-[12%] py-10 scroll-mt-20'>
-        <motion.h4 
-        initial={{y: -20, opacity: 0}}
-        whileInView={{y:0, opacity: 1}}
-        transition={{delay: 0.3, duration: 0.5}}
-        className='text-center mb-2 text-lg font-Ovo'>
-            My work
-        </motion.h4>
-        <motion.h2
-        initial={{y: -20, opacity: 0}}
-        whileInView={{y:0, opacity: 1}}
-        transition={{delay: 0.5, duration: 0.5}}
-        className='text-center text-5xl font-Ovo'>
-            Highlighted programming projects
-        </motion.h2>
-        <motion.p 
-        initial={{opacity: 0}}
-        whileInView={{opacity: 1}}
-        transition={{delay: 0.7, duration: 0.5}}
-        className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
-            I have worked on several programming including full-stack iOS delevopment,
-            machine learning, and more.
-        </motion.p>
-        <motion.div 
+    <motion.div 
+      initial={{opacity: 0}}
+      whileInView={{opacity: 1}}
+      transition={{duration: 1}}
+      id='projects' 
+      className='w-full px-[12%] py-10 scroll-mt-20'
+    >
+      {/* ... rest of the header content ... */}
+      
+      <motion.div 
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         transition={{delay: 0.9, duration: 0.6}}
-        className='grid grid-cols-auto my-10 gap-5 dark:text-black'>
-            {workData.map(({title, description, bgImage}, idx) => (
-                <motion.div key={idx} 
-                whileHover={{scale: 1.05}}
-                transition={{duration: 0.7}}
-                className='aspect-square bg-no-repeat bg-cov bg-center rounded-lg
-                relative cursor-pointer group'
-                style={{backgroundImage: `url(${bgImage})`}}>
-                    <div className='bg-white w-10/12 rounded-md absolute bottom-5
-                    left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
-                    justify-between duration-500 group-hover:bottom-7'>
-                        <div>
-                            <h2 className='font-semibold'>{title}</h2>
-                            <p className='text-sm text-gray-700'>{description}</p>
+        className='flex flex-col gap-8 my-10'
+      >
+        {workData.map(({title, description, bgImage, url, tech}, idx) => (
+          <motion.div 
+            key={idx}
+            whileHover={{scale: 1.02}}
+            transition={{duration: 0.7}}
+            className='bg-white rounded-lg shadow-lg dark:bg-gray-800 relative'
+          >
+            <div className='flex flex-col md:flex-row'>
+              <div 
+                className='w-full md:w-2/5 h-64 bg-no-repeat bg-cover bg-center'
+                style={{backgroundImage: `url(${bgImage})`}}
+              />
+              <div className='w-full md:w-3/5 p-6'>
+                <div className="flex justify-between items-start w-full">
+                  <div>
+                    <h3 className='text-xl font-semibold mb-2'>{title}</h3>
+                    <p className='text-gray-600 dark:text-gray-300'>{description}</p>
+                  </div>
+                  <div className="relative">
+                    <div className={`border rounded-full border-black w-9 h-9 
+                      flex items-center justify-center shadow-[2px_2px_0_#000]
+                      hover:bg-lightHover dark:border-white dark:hover:bg-darkHover 
+                      transition cursor-pointer ${title === "ILMUNC App" ? "cursor-help" : ""}`}
+                    >
+                      {title === "ILMUNC App" ? (
+                        <div 
+                          className="relative group"
+                          onClick={() => toggleTooltip(title)}
+                          onMouseEnter={() => setShowTooltip(prev => ({...prev, [title]: true}))}
+                          onMouseLeave={() => setShowTooltip(prev => ({...prev, [title]: false}))}
+                        >
+                          <Image 
+                            src={isDarkMode ? assets.github_dark : assets.github_light} 
+                            alt="GitHub"
+                            width={20} 
+                            height={20}
+                          />
+                          <div className={`${showTooltip[title] ? 'block' : 'hidden'} 
+                            fixed bg-black dark:bg-white 
+                            text-white dark:text-black text-sm rounded-md py-1 px-2 w-48
+                            transform -translate-x-20 -translate-y-20
+                            z-[100]`}
+                          >
+                            Private repo - Contact me to view
+                          </div>
                         </div>
-                        <div className='border rounded-full border-black w-9
-                        aspect-square flex items-center justify-center shadow-[2px_2px_0_#000]
-                        group-hover:bg-lightHover transition'>
-                            <Image src={assets.send_icon} alt='' className='w-5'/>
-                        </div>
+                      ) : (
+                        <a 
+                          href={url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          <Image 
+                            src={isDarkMode ? assets.github_dark : assets.github_light} 
+                            alt="GitHub"
+                            width={20} 
+                            height={20}
+                          />
+                        </a>
+                      )}
                     </div>
-                </motion.div>
-            ))}
-        </motion.div>
-        <motion.a 
-        initial={{opacity: 0}}
-        whileInView={{opacity: 1}}
-        transition={{delay: 1.1, duration: 0.7}}
-        href='' 
-        className='w-max flex items-center justify-center gap-2 text-gray-700
-        border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20
-        hover:bg-lightHover duration-500 dark:text-white dark:border-white 
-        dark:hover:bg-darkHover'>
-            Show more 
-            <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt='->' className='w-4'/>
-        </motion.a>
+                  </div>
+                </div>
+                
+                <div className='mt-4 space-y-2'>
+                  <p className='text-sm text-gray-500 dark:text-gray-400'>
+                    Technologies used:
+                    <span className='ml-2 text-gray-700 dark:text-gray-300'>
+                      {tech}
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
     </motion.div>
   )
 }

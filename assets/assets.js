@@ -35,6 +35,8 @@ import lloyd_logo from './lloyd_logo.png';
 import marathon_logo from './marathon_logo.jpeg';
 import picso_logo from './picso_logo.png';
 import tag_logo from './tag_logo.jpg';
+import github_light from './github-mark.png'
+import github_dark from './github-mark-white.png'
 
 export const assets = {
     user_image,
@@ -73,33 +75,45 @@ export const assets = {
     lloyd_logo,
     marathon_logo,
     picso_logo,
-    tag_logo
+    tag_logo,
+    github_dark,
+    github_light
 };
 
 export const workData = [
     {
         title: 'ILMUNC App',
-        description: 'iOS Application',
+        description: 'An iOS/Android application for running Model UN conferences supporting hundreds of users supporting authentication, push notifications, and Airtable integration for the data',
+        url: '',
+        tech: 'Flutter, Firebase',
         bgImage: '/work-1.png',
     },
     {
         title: 'HGit',
-        description: 'Haskell Git Clone',
+        description: 'A lightweight clone of Git using Haskell supporting the primary porcelain commands (init, add, commit, branch, switch, status, log)',
+        url: 'https://github.com/grantwells10/haskell-git',
+        tech: 'Haskell',
         bgImage: '/work-2.png',
     },
     {
         title: 'NBA Predictor',
-        description: 'Machine Learning',
+        description: 'A machine learning project to predict NBA player point totals using Gradient Boosting Regression and Random Forest Regression with Randomized Search hyperparameter tuning',
+        url: 'https://github.com/grantwells10/nba-pts-predictor',
+        tech: 'Python, Google Colab, SciKit, MatPlotLib, Pandas, Numpy',
         bgImage: '/work-3.png',
     },
     {
-        title: 'MoralMap',
-        description: 'Web Application',
+        title: 'Moral Map',
+        description: 'A crowdsourcing project that maps the intricate ethical landscape of the United States, revealing how regional, demographic, and ideological factors influence moral judgments on contemporary issues',
+        url: 'https://github.com/grantwells10/moral-map',
+        tech: 'MongoDB, Express, React, Node',
         bgImage: '/work-4.png',
     },
     {
         title: 'QuickConvert',
-        description: 'Chome Extension',
+        description: 'A Chrome web extension to automatically convert selected prices on shopping websites to aspecified target currency using React and TypeScript with the CurrencyLayer API for conversion rates',
+        url: 'https://github.com/grantwells10/quick-convert',
+        tech: 'React, TypeScript',
         bgImage: '/work-4.png',
     },
 ]
