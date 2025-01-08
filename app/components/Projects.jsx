@@ -21,7 +21,6 @@ const Projects = ({isDarkMode}) => {
       id='projects' 
       className='w-full px-[12%] py-10 scroll-mt-20'
     >
-      {/* ... rest of the header content ... */}
       
       <motion.div 
         initial={{opacity: 0}}
@@ -34,11 +33,12 @@ const Projects = ({isDarkMode}) => {
             key={idx}
             whileHover={{scale: 1.02}}
             transition={{duration: 0.7}}
-            className='bg-white rounded-lg shadow-lg dark:bg-gray-800 relative'
+            className='relative bg-white rounded-lg shadow-lg dark:bg-gray-800 border-[1px] border-black dark:border-white'
           >
+            {/* Removed overflow-hidden from the card container */}
             <div className='flex flex-col md:flex-row'>
               <div 
-                className='w-full md:w-2/5 h-64 bg-no-repeat bg-cover bg-center'
+                className='w-full md:w-2/5 h-64 bg-no-repeat bg-cover bg-center overflow-hidden'
                 style={{backgroundImage: `url(${bgImage})`}}
               />
               <div className='w-full md:w-3/5 p-6'>
@@ -55,8 +55,9 @@ const Projects = ({isDarkMode}) => {
                     >
                       {title === "ILMUNC App" ? (
                         <div 
-                          className="relative group"
+                          className="relative"
                           onClick={() => toggleTooltip(title)}
+                          onTouchStart={() => toggleTooltip(title)}
                           onMouseEnter={() => setShowTooltip(prev => ({...prev, [title]: true}))}
                           onMouseLeave={() => setShowTooltip(prev => ({...prev, [title]: false}))}
                         >
@@ -66,11 +67,13 @@ const Projects = ({isDarkMode}) => {
                             width={20} 
                             height={20}
                           />
-                          <div className={`${showTooltip[title] ? 'block' : 'hidden'} 
-                            fixed bg-black dark:bg-white 
+                          <div className={`${showTooltip[title] ? 'opacity-100 visible' : 'opacity-0 invisible'} 
+                            fixed sm:absolute transform -translate-x-1/2 left-1/2
+                            bg-black dark:bg-white 
                             text-white dark:text-black text-sm rounded-md py-1 px-2 w-48
-                            transform -translate-x-20 -translate-y-20
-                            z-[100]`}
+                            transition-opacity duration-200
+                            pointer-events-none
+                            -top-12 z-50`}
                           >
                             Private repo - Contact me to view
                           </div>

@@ -81,38 +81,38 @@ export const assets = {
 export const workData = [
     {
         title: 'ILMUNC App',
-        description: 'An iOS/Android application for running Model UN conferences supporting hundreds of users supporting authentication, push notifications, and Airtable integration for the data',
+        description: 'An iOS/Android application for running Model UN conferences supporting hundreds of users with CRUD operations, authentication, push notifications, and Firebase Functions for Airtable data integration',
         url: '',
         tech: 'Flutter, Firebase',
-        bgImage: '/work-1.png',
+        bgImage: '/ilmunc.png',
     },
     {
         title: 'HGit',
         description: 'A lightweight clone of Git using Haskell supporting the primary porcelain commands (init, add, commit, branch, switch, status, log)',
         url: 'https://github.com/grantwells10/haskell-git',
         tech: 'Haskell',
-        bgImage: '/work-2.png',
+        bgImage: '/hgit.png',
     },
     {
         title: 'NBA Predictor',
         description: 'A machine learning project to predict NBA player point totals using Gradient Boosting Regression and Random Forest Regression with Randomized Search hyperparameter tuning',
         url: 'https://github.com/grantwells10/nba-pts-predictor',
         tech: 'Python, Google Colab, SciKit, MatPlotLib, Pandas, Numpy',
-        bgImage: '/work-3.png',
+        bgImage: '/nba.png',
     },
     {
         title: 'Moral Map',
         description: 'A crowdsourcing project that maps the intricate ethical landscape of the United States, revealing how regional, demographic, and ideological factors influence moral judgments on contemporary issues',
         url: 'https://github.com/grantwells10/moral-map',
-        tech: 'MongoDB, Express, React, Node',
-        bgImage: '/work-4.png',
+        tech: 'MongoDB, Express, React, Node, Google Colab',
+        bgImage: '/moral-map.png',
     },
     {
         title: 'QuickConvert',
-        description: 'A Chrome web extension to automatically convert selected prices on shopping websites to aspecified target currency using React and TypeScript with the CurrencyLayer API for conversion rates',
+        description: 'A Chrome web extension to automatically convert selected prices on shopping websites to a specified target currency using React and TypeScript with the CurrencyLayer API for conversion rates',
         url: 'https://github.com/grantwells10/quick-convert',
         tech: 'React, TypeScript',
-        bgImage: '/work-4.png',
+        bgImage: '/quick-convert.png',
     },
 ]
 
@@ -126,7 +126,7 @@ export const experienceData = [
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'Java, Python, Haskell, HTML, CSS, ReactJS, NextJS, and Flutter' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'BSE in Computer Science, Minor in Mathematics' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Project experience MERN for web development and Flutter+Firebase for iOS as well as Machine Learning in Python' }
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'FlutterFire, MERN, and ML project development experience' }
 ];
 
 export const toolsData = [

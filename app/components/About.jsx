@@ -44,7 +44,7 @@ const About = ({isDarkMode}) => {
             transition={{duration: 0.6, delay: 0.8}}
             className='flex-1'>
                 <p className='mb-10 max-w-2xl font-Ovo'>
-                    I was born and raised in Princeton, NJ and currently am a student at UPenn.
+                    I was born and raised in Princeton, NJ and currently am a student at UPenn's Engineering School.
                     I have internship experience in tech and finance, with freelance full stack
                     development experience. I am currently seeking jobs in Software Engineering, and I am
                     excited to bring my diverse background and skillset to a new company!
