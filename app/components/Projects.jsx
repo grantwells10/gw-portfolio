@@ -38,7 +38,7 @@ const Projects = ({isDarkMode}) => {
             {/* Removed overflow-hidden from the card container */}
             <div className='flex flex-col md:flex-row'>
               <div 
-                className='w-full md:w-2/5 h-64 bg-no-repeat bg-cover bg-center overflow-hidden'
+                className='w-full md:w-2/5 h-64 bg-no-repeat bg-cover bg-center rounded-l-lg'
                 style={{backgroundImage: `url(${bgImage})`}}
               />
               <div className='w-full md:w-3/5 p-6'>
@@ -75,7 +75,7 @@ const Projects = ({isDarkMode}) => {
                             `}
                           >
                             <div className="relative">
-                              Private repo - Contact me to view
+                              Private repo - Contact me to view a demo
                               <div className="absolute w-3 h-3 bg-black dark:bg-white rotate-45 left-1/2 -bottom-1.5 transform -translate-x-1/2"></div>
                             </div>
                           </div>
