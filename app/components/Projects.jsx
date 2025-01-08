@@ -22,10 +22,27 @@ const Projects = ({isDarkMode}) => {
       className='w-full px-[12%] py-10 scroll-mt-20'
     >
       
+      <motion.h4 
+        initial={{y: -20, opacity: 0}}
+        whileInView={{y: 0, opacity: 1}}
+        transition={{delay: 0.3, duration: 0.5}}
+        className='text-center mb-2 text-lg font-Ovo'>
+            What I've been working on
+        </motion.h4>
+
+        <motion.h2 
+        initial={{y: -20, opacity: 0}}
+        whileInView={{y: 0, opacity: 1}}
+        transition={{delay: 0.5, duration: 0.5}}
+        className='text-center text-5xl font-Ovo'>
+            My Projects
+        </motion.h2>
+
+
       <motion.div 
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
-        transition={{delay: 0.9, duration: 0.6}}
+        transition={{delay: 1.2, duration: 0.6}}
         className='flex flex-col gap-8 my-10'
       >
         {workData.map(({title, description, bgImage, url, tech}, idx) => (
