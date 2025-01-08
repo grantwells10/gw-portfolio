@@ -5,11 +5,8 @@ import edu_icon from './edu-icon.png';
 import edu_icon_dark from './edu-icon-dark.png';
 import project_icon from './project-icon.png';
 import project_icon_dark from './project-icon-dark.png';
-import vscode from './vscode.png';
 import firebase from './firebase.png';
-import figma from './figma.png';
 import git from './git.png';
-import mongodb from './mongodb.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logo.png';
 import logo_dark from './logo_dark.png';
@@ -37,6 +34,8 @@ import picso_logo from './picso_logo.png';
 import tag_logo from './tag_logo.jpg';
 import github_light from './github-mark.png'
 import github_dark from './github-mark-white.png'
+import cursor from './cursor.avif'
+import colab from './colab.webp'
 
 export const assets = {
     user_image,
@@ -46,11 +45,8 @@ export const assets = {
     edu_icon_dark,
     project_icon,
     project_icon_dark,
-    vscode,
     firebase,
-    figma,
     git,
-    mongodb,
     right_arrow_white,
     logo,
     logo_dark,
@@ -77,7 +73,9 @@ export const assets = {
     picso_logo,
     tag_logo,
     github_dark,
-    github_light
+    github_light,
+    cursor,
+    colab
 };
 
 export const workData = [
@@ -132,5 +130,5 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.cursor, assets.colab, assets.git, assets.firebase
 ];
