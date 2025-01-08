@@ -54,12 +54,10 @@ const Projects = ({isDarkMode}) => {
                       transition cursor-pointer ${title === "ILMUNC App" ? "cursor-help" : ""}`}
                     >
                       {title === "ILMUNC App" ? (
-                        <div 
-                          className="relative"
+                        <button 
+                          className="relative focus:outline-none"
                           onClick={() => toggleTooltip(title)}
-                          onTouchStart={() => toggleTooltip(title)}
-                          onMouseEnter={() => setShowTooltip(prev => ({...prev, [title]: true}))}
-                          onMouseLeave={() => setShowTooltip(prev => ({...prev, [title]: false}))}
+                          aria-label="Show info about private repository"
                         >
                           <Image 
                             src={isDarkMode ? assets.github_dark : assets.github_light} 
@@ -67,17 +65,21 @@ const Projects = ({isDarkMode}) => {
                             width={20} 
                             height={20}
                           />
-                          <div className={`${showTooltip[title] ? 'opacity-100 visible' : 'opacity-0 invisible'} 
-                            fixed sm:absolute transform -translate-x-1/2 left-1/2
-                            bg-black dark:bg-white 
-                            text-white dark:text-black text-sm rounded-md py-1 px-2 w-48
-                            transition-opacity duration-200
-                            pointer-events-none
-                            -top-12 z-50`}
+                          <div 
+                            className={`
+                              ${showTooltip[title] ? 'block' : 'hidden'}
+                              absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2
+                              bg-black dark:bg-white 
+                              text-white dark:text-black text-sm rounded-md py-2 px-3 w-48
+                              shadow-lg z-50
+                            `}
                           >
-                            Private repo - Contact me to view
+                            <div className="relative">
+                              Private repo - Contact me to view
+                              <div className="absolute w-3 h-3 bg-black dark:bg-white rotate-45 left-1/2 -bottom-1.5 transform -translate-x-1/2"></div>
+                            </div>
                           </div>
-                        </div>
+                        </button>
                       ) : (
                         <a 
                           href={url} 
