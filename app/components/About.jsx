@@ -36,7 +36,7 @@ const About = ({isDarkMode}) => {
             whileInView={{opacity: 1, scale: 1}}
             transition={{duration: 0.6}}
             className='w-64 sm:w-80 rounded-3xl max-w-none'>
-                <Image src={assets.user_image} alt='user' className='w-full'/>
+                <Image src={assets.user_image} alt='user' className='w-full rounded-lg'/>
             </motion.div>
             <motion.div 
             initial={{opacity: 0}}
