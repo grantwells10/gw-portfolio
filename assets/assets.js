@@ -117,10 +117,10 @@ export const workData = [
 ]
 
 export const experienceData = [
+    { icon: assets.picso_logo, title: 'Capital One', description: 'Incoming Software Engineering Intern, Summer 2025', link: 'https://www.capitalonecareers.com/internship-programs' },
     { icon: assets.tag_logo, title: 'TAG Infosphere', description: 'AI Intern, Summer 2024', link: 'https://tag-infosphere.com/' },
     { icon: assets.marathon_logo, title: 'Marathon Asset Management', description: 'Data Analyst Intern, Summer 2023', link: 'https://www.marathonfund.com/' },
     { icon: assets.lloyd_logo, title: 'Lloyd Group', description: 'Automation & Development Intern, Summer 2022', link: 'https://www.lloydgroup.com/' },
-    { icon: assets.picso_logo, title: 'PICSO Lab', description: 'Research Intern, Summer 2021', link: 'https://picsolab.github.io/' },
 ]
 
 export const infoList = [
