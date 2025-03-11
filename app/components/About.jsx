@@ -45,9 +45,8 @@ const About = ({isDarkMode}) => {
             className='flex-1'>
                 <p className='mb-10 max-w-2xl font-Ovo'>
                     I was born and raised in Princeton, NJ and now am a student at UPenn's Engineering School.
-                    I have internship experience in tech and finance, with freelance full stack
-                    development experience. I am seeking jobs in Software Engineering, and I am
-                    excited to bring my diverse background and skillset to a new company!
+                    I am an incoming Software Engineering at Capital One in McLean, VA, with interests in AI, 
+                    backend development, and more!
                 </p>
                 <motion.ul 
                 initial={{opacity: 0}}
