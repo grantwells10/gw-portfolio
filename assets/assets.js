@@ -30,7 +30,7 @@ import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import lloyd_logo from './lloyd_logo.png';
 import marathon_logo from './marathon_logo.jpeg';
-import picso_logo from './picso_logo.png';
+import c1_logo from './c1_logo.jpg';
 import tag_logo from './tag_logo.jpg';
 import github_light from './github-mark.png'
 import github_dark from './github-mark-white.png'
@@ -70,7 +70,7 @@ export const assets = {
     right_arrow_bold_dark,
     lloyd_logo,
     marathon_logo,
-    picso_logo,
+    c1_logo,
     tag_logo,
     github_dark,
     github_light,
