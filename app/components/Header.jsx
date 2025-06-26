@@ -27,15 +27,15 @@ const Header = () => {
         whileInView={{y: 0, opacity: 1}}
         transition={{duration: 0.8, delay: 0.5}}
         className='text-3xl sm:text-6xl lg:text-[66px] font-Ovo'>
-            student + aspiring software developer
+            student + tech and finance enthusiast
         </motion.h1>
         <motion.p 
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         transition={{duration: 0.6, delay: 0.7}}
         className='max-w-2xl mx-auto font-Ovo'>
-            I am currently a Junior at the University of Pennsylvania studying
-            Computer Science with a Minors in Math and Datascience interested in technology and finance.
+            I am currently a rising Senior at the University of Pennsylvania studying
+            Computer Science with a Minors in Math and Datascience interested in work at the intersection of technology and finance.
         </motion.p>
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
             <motion.a
