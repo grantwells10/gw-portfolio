@@ -117,7 +117,7 @@ const Projects = ({isDarkMode}) => {
                 
                 <div className='mt-4 space-y-2'>
                   <p className='text-sm text-gray-500 dark:text-gray-400'>
-                    Technologies used:
+                    Technical Skills:
                     <span className='ml-2 text-gray-700 dark:text-gray-300'>
                       {tech}
                     </span>

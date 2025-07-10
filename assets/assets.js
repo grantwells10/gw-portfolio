@@ -81,6 +81,27 @@ export const assets = {
 
 export const workData = [
     {
+        title: 'PennOS',
+        description: 'A simple guest operating system built from scratch in C featuring a kernel, scheduler, file system, and shell for user interaction',
+        url: '',
+        tech: 'C, Operating Systems',
+        bgImage: '/pennos.png',
+    },
+    {
+        title: '5-Stage Pipelined Processor',
+        description: 'A fully pipelined RISC-V processor with 5 stages (FDXMW) supporting RV32IM instructions, including branch prediction, bypassing, load-use stalling, and cycle-accurate execution on FPGA boards',
+        url: '',
+        tech: 'SystemVerilog, Computer Architecture',
+        bgImage: '/processor.png',
+    },
+    {
+        title: 'DBMusic',
+        description: 'A fullstack music discovery and organization platform enabling users to search albums/tracks, get personalized recommendations, save favorites, write reviews, and explore music by genre and artist',
+        url: '',
+        tech: 'Node.js, React, PostgreSQL, Amazon RDS',
+        bgImage: '/dbmusic.png',
+    },
+    {
         title: 'ILMUNC App',
         description: 'An iOS/Android application for running Model UN conferences supporting hundreds of users with CRUD operations, authentication, push notifications, and Firebase Functions for Airtable data integration',
         url: '',
@@ -91,7 +112,7 @@ export const workData = [
         title: 'HGit',
         description: 'A lightweight clone of Git using Haskell supporting the primary porcelain commands (init, add, commit, branch, switch, status, log)',
         url: 'https://github.com/grantwells10/haskell-git',
-        tech: 'Haskell',
+        tech: 'Haskell, Functional Programming',
         bgImage: '/hgit.png',
     },
     {
